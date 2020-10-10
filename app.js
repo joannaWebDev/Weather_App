@@ -17,7 +17,7 @@ const onSuccess = (position) => {
     callWeather(latitude, longitude);
 };
 
-const onError = (error) => {
+/* const onError = (error) => {
     //console.error(error.message);
     const notification = document.createElement('p');
     notification.innerText = error.message;
@@ -26,7 +26,7 @@ const onError = (error) => {
     divNotification.appendChild(notification);
     divNotification.style.display = 'block';
 }
-
+ */
 const convertKelvinToCelsius = kelvin => Math.round(kelvin - 273.15);
 
 const getTimeString = function(input, separator) {
