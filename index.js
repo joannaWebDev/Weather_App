@@ -3,7 +3,7 @@
 //navigator.geolocation.getCurrentPosition((data) => console.log(data));
 
 const APIkey = '9171d489fca6eb9a131ed77fdfc3955f';
-const baseURL = 'http://api.openweathermap.org/data/2.5/weather?';
+const baseURL = 'https://api.openweathermap.org/data/2.5/weather?';
 //? lo que sigue en adelante son parámetros
 
 
