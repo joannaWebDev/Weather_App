@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+}
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    max-width: 40vw;
+    min-height: 40vh;
+    background-color: #0993f3;
+    color: #fff;
+    margin: 15% auto;
+    border-radius: 10px;
+    padding: 0 1% 2% 1%;
+}
+
+.weather-icon {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+}
+
+.temperature-description {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+}
+
+.temperature-value {
+    grid-column: 4 / span 4;
+    grid-row: 1;
+}
+
+.hour {
+    grid-column: 4 / span 4;
+    grid-row: 2;
+}
+
+.maxMin {
+    grid-column: 1 / span 8;
+    grid-row: 6;
+}
+
+.location {
+    grid-column: 1 / span 8;
+    grid-row: 8;
+}
+
+.filter {
+    filter: invert(100%);
+}
+
+.temperature-description p {
+    padding-left: 8%;
+    font-weight: 300;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
+.temperature-value {
+    text-align: right;
+    padding-top: 13%;
+}
+
+.temperature-value p {
+    font-size: 4em;
+}
+
+#hour {
+    text-align: right;
+    padding-left: 2%;
+    font-size: 1em;
+}
+
+.location p,
+#maxMin {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+}
