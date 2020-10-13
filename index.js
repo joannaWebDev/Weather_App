@@ -48,20 +48,18 @@ const showWeatherInfo = info => {
 
     const iconElement = document.getElementById('icon');
     iconElement.src = `icons/${icon}.png`;
-
+    
     const pTemp = document.getElementById('temp');
     pTemp.innerText = `${convertKelvinToCelsius(temp)}º`;
-    /*pendiente cambiar fondo
-    console.log(pTemp);
-    const integer = parseInt(pTemp, 10);
-    console.log(integer);
+    const pTempText = pTemp.innerText;
+    //console.log(pTempText);
 
-    if (integer < 8) {
+ /*     if (pTempText < '24º') {
         console.log('cold')
     } else {
         console.log('rain');
-    }
-*/
+    }  */
+
     const maxMin = document.getElementById('maxMin');
     maxMin.innerText = `${convertKelvinToCelsius(temp_max)}/${convertKelvinToCelsius(temp_min)} `
 
@@ -74,6 +72,17 @@ const showWeatherInfo = info => {
     const paragraphHour = document.getElementById('hour');
     paragraphHour.innerText = getTimeString();
 
+    //CHANGE THE BACKGROUND WHEN IS NIGHTTIME
+    /* const paragraphHourText=  paragraphHour.innerText;
+    console.log(paragraphHourText);
+    if (paragraphHourText > '12:00') {
+            var background = document.getElementsByClassName('grid-container');
+            background.style.color = 'black'
+            console.log(background);
+            } else {
+                console.log('all good');
+        } 
+ */
     
     console.log(`'RESULT:', ${icon}, ${convertKelvinToCelsius(temp)}, ${description}, ${name}, ${country} 
     ${paragraphHour} ${convertKelvinToCelsius(temp_max)}/${convertKelvinToCelsius(temp_min)}`);
