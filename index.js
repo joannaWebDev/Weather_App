@@ -1,15 +1,9 @@
-// Go to this URL and register https://openweathermap.org/appid
-// Get your API KEY (appid)  : 9171d489fca6eb9a131ed77fdfc3955f
-//navigator.geolocation.getCurrentPosition((data) => console.log(data));
-
 const APIkey = '9171d489fca6eb9a131ed77fdfc3955f';
 const baseURL = 'https://api.openweathermap.org/data/2.5/weather?';
 //? lo que sigue en adelante son parámetros
 
-
 const onSuccess = (position) => {
     //console.log('from onSuccess', position);
-
     const { 
         coords: {latitude, longitude}
     } = position;
@@ -52,13 +46,6 @@ const showWeatherInfo = info => {
     const pTemp = document.getElementById('temp');
     pTemp.innerText = `${convertKelvinToCelsius(temp)}º`;
     const pTempText = pTemp.innerText;
-    //console.log(pTempText);
-
- /*     if (pTempText < '24º') {
-        console.log('cold')
-    } else {
-        console.log('rain');
-    }  */
 
     const maxMin = document.getElementById('maxMin');
     maxMin.innerText = `${convertKelvinToCelsius(temp_max)}/${convertKelvinToCelsius(temp_min)} `
@@ -71,22 +58,10 @@ const showWeatherInfo = info => {
 
     const paragraphHour = document.getElementById('hour');
     paragraphHour.innerText = getTimeString();
-
-    //CHANGE THE BACKGROUND WHEN IS NIGHTTIME
-    /* const paragraphHourText=  paragraphHour.innerText;
-    console.log(paragraphHourText);
-    if (paragraphHourText > '12:00') {
-            var background = document.getElementsByClassName('grid-container');
-            background.style.color = 'black'
-            console.log(background);
-            } else {
-                console.log('all good');
-        } 
- */
     
     console.log(`'RESULT:', ${icon}, ${convertKelvinToCelsius(temp)}, ${description}, ${name}, ${country} 
     ${paragraphHour} ${convertKelvinToCelsius(temp_max)}/${convertKelvinToCelsius(temp_min)}`);
-    //[object HTMLParagraphElement]
+
     
 };
 
@@ -97,7 +72,7 @@ const callWeather = (latitude, longitude) => {
 
 };
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
-//fetch(URL).then(onSuccess(), onError())
+
 
 
 
